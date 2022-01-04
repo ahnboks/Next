@@ -47,19 +47,19 @@ nextjs란 React의 서버사이드 렌더링(SSR)을 쉽게 구현할 수 있게
 * code splitting : 필요에 따라 파일을 불러올 수 있게 여러 개의 파일을 분리 하는 것. 자바스크립트 로딩 시간 개선이 가능하다.
 
 ### 3.1 Pre-rendering
->  Next.js는 pre-rendering을 **Static Generation**, **Server-side Rendering** 두 가지 형식으로 제공한다. 
+>  Next.js는 pre-rendering을 **Static-Site Generation**, **Server-Side Rendering** 두 가지 형식으로 제공한다. 
 >  
->  * Static Generation(SSG): 빌드 타임에 HTML을 생성하는 pre-rendering 방법이다. pre-rendered된 HTML은 각 요청마다 재사용이 가능하다.
->  * Server-side Rendering(SSR): 각 요청마다 HTML을 생성하는 pre-rendering 방법이다.
+>  * **Static-Site Generation(SSG)**: 빌드 타임에 HTML을 생성하는 pre-rendering 방법이다. pre-rendered된 HTML은 각 요청마다 재사용이 가능하다.
+>  * **Server-Side Rendering(SSR)**: 각 요청마다 HTML을 생성하는 pre-rendering 방법이다.
 >  
->  <code>npm run dev</code>나 <code>yarn dev</code>를 통해 개발을 하는 동안에는 Static Generation 방식을 사용하고 있다해도 모든 페이지가 각 요청마다 pre-rendering 된다.  
+>  <code>npm run dev</code>나 <code>yarn dev</code>를 통해 개발을 하는 동안에는 Static-Site Generation 방식을 사용하고 있다해도 모든 페이지가 각 요청마다 pre-rendering 된다.  
 >  여기서 중요한 점은, Next.js는 **각 페이지마다 우리에게 어떠한 pre-rendering 방식을 사용할지 선택할 수 있게 해주는 것**이다.  
->  따라서 특정 페이지에는 Static Genration 방식을, 나머지 페이지에는 Server-side Rendering 방식을 사용할 수 있는 **"hybrid"앱**을 만들 수 있다.
+>  따라서 특정 페이지에는 Static Genration 방식을, 나머지 페이지에는 Server-Side Rendering 방식을 사용할 수 있는 **"hybrid"앱**을 만들 수 있다.
 >  
->  ### 3.1.1 Static Generation v.s. Server-side Rendering
->  Next.js 공식 문서에서는 가능하면 Static Generation 방식을 사용하기를 권장하고 있다.  
+>  ### 3.1.1 Static-Site Generation v.s. Server-Side Rendering
+>  Next.js 공식 문서에서는 가능하면 Static-Site Generation 방식을 사용하기를 권장하고 있다.  
 >  페이지가 한번 빌드되어 CDN에 의해 제공이 될 수 있으며 매번 페이지 요청을 하는 것보다 렌더링하는 속도가 빠르기 때문이다.  
->  페이지를 제작할 때 "사용자의 요청보다 먼저 페이지가 렌더링되어도 되는가?" 에 대한 질문을 자신에게 던져보고, 대답이 "응" 이라면 Static Generation을 선택하는게 좋을 듯하다.
+>  페이지를 제작할 때 "사용자의 요청보다 먼저 페이지가 렌더링되어도 되는가?" 에 대한 질문을 자신에게 던져보고, 대답이 "응" 이라면 Static-Site Generation을 선택하는게 좋을 듯하다.
 >  반대로, 데이터의 업데이트가 많거나 사용자의 요청마다 매번 바뀌는 페이지라면 별로 좋은 선택이 아닐 것이다.   
 >  
 >  ### getStaticProps
