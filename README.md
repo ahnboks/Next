@@ -21,9 +21,9 @@ nextjs란 React의 서버사이드 렌더링(SSR)을 쉽게 구현할 수 있게
 <img src="https://media.vlpt.us/images/kdo0129/post/14753408-aa2e-4eed-948f-4b6bcef026b5/image.png" alt="SSR"/>
 
 ### 1.2 클라이언트 사이드 렌더링(CSR)
-> Client Side Rendering 의 약자로. 처음 요청시 **한페이지**만 불러온 후, 클라이언트에서 렌더링하는 방식. (SPA: Single Page Application)
+> Client Side Rendering 의 약자로. 초기에 페이지가 일단 렌더가 된 이후, 클라이언트에서 데이터를 불러오며 다시 한 번 렌더링하는 방식. (SPA: Single Page Application)
 > > #### 1.2.1 장점
-> > * 첫요청 후, 유저 요청 발생시 전체 페이지 요청이 아닌 필요한 부분만 리렌더링한다.
+> > * 첫요청 후, 유저 요청 발생시 전체 페이지 요청이 아닌 필요한 부분만 리렌더링한다. 
 > > * 즉, 리로딩 없이 서버로부터 데이터를 받아 화면을 갱신 하기때문에 SSR보다 빠르다.
 > > * 코드의 재사용성이 높아진다.
 > > #### 1.2.2 단점
