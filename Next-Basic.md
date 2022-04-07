@@ -72,12 +72,14 @@ HTML은 각 요청마다 재사용이 가능하며, 주로 데이터가 절대 �
 >  > **"빌드 시에 딱 한 번"** 만 호출되고, 바로 static file로 빌드되며, 따라서 이후 수정이 불가능하다.
 >  > 앱 빌드 후 고정된 내용이 있는 page에만 사용하는 것이며 좋으며,   
 >  > 호출 시마다 매번 데이터 요청을 하지 않으니 getServerSideProps보다 성능면에서 좋다   
+>  > <img src="https://www.habilelabs.io/wp-content/uploads/2021/01/static-generation.png" alt="ssr"/>
 >  
 >  ### getServerSideProps
 >  > **SSR 시 사용하는 함수이다.**   
 >  > **"page가 요청 받을 때마다"** 호출되며,   
 >  > pre-render가 꼭 필요한 **동적 데이터**가 있는 page에 사용하면 된다.   
 >  > 매 요청마다 호출되므로 성능은 떨어지나, 내용을 언제든 동적으로 수정 가능하다.   
+>  > <img src="https://www.habilelabs.io/wp-content/uploads/2021/01/server-side.png" alt="ssg"/>
 
 
 <br/>
@@ -101,4 +103,4 @@ npm run dev
 - SSR 데이터 패칭 (https://velog.io/@mskwon/Next-JS-SSR-getServerSideProps)
 - Next.js 공식문서 (https://nextjs.org/docs/getting-started)
 - webpack 번들링 개념 및 사용이유 (https://humanwater.tistory.com/2)
-
+- SSR, SSG 데이터 패칭 그림 (https://www.habilelabs.io/data-fetching-in-nextjs-pre-rendering-types/)
